@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="manifest" href="manifest.json">
+    <script type="text/javascript">
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("sw.js");
+      }
+    </script>
+    <meta charset="UTF-8">
+    <title>Ecuaciones y expresiones algebraicas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@600&family=Exo:ital,wght@1,600&display=swap" rel="stylesheet">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="container">
+        <!--    EMPEZAR     -->
+        <div id="start">EMPEZAR TEST</div>
+
+        <!--    SECCION DE LA GUIA    -->
+        <div id="guide">
+            <h2>Test Matematico</h2>
+            <h4>1. El siguente test consta de 100 preguntas </h4>
+            <h4>2. Solo tendras 10 segundos para poder contestar las preguntas.</h4>
+            <h4>3. Solo podras seleccionar una respuesta.</h4>
+            <h4>4. Obtendras puntos por cada respuesta correcta.</h4>
+            <h4>5. Una vez comienzes el test no podras salir.</h4>
+            <div id="button">
+                <button id="exit">SALIR</button>
+                <button id="continue">CONTINUAR</button>
+            </div>
+        </div>
+
+        <!--    SECCION DEL TEST    -->
+        <div id="quiz">
+            <div id="quiz_header">
+                <h5>TEST MATEMATICO</h5>
+                <div id="timer">
+                    <h6>Tiempo</h6>
+                    <h6 id="time">00</h6>
+                </div>
+            </div>
+
+            <!--     PREGUNTAS DEL TEST  -->
+
+            <div id="question">
+                <h2 id="questionNo"></h2>
+                <h2 id="questionText"></h2>
+            </div>
+
+            <!--       OPCIONES DEL TEST   -->
+
+            <div id="optionList">
+                <h4 class="choice_que" id="option1"></h4>
+                <h4 class="choice_que" id="option2"></h4>
+                <h4 class="choice_que" id="option3"></h4>
+                <h4 class="choice_que" id="option4"></h4>
+            </div>
+
+            <!--  RESPUESTAS-->
+
+            <div id="answersSection">
+                <h3 id="total_correct">3 Of 10 preguntas</h3>
+                <h3 id="next_question">Siguente</h3>
+            </div>
+        </div>
+        <!--   RESULTADOS  -->
+        <div id="result">
+            <i class="fas fa-trophy"></i>
+            <h6>Has completado el Test</h6>
+            <h6 id="points">obtuviste 4 de 10</h6>
+            <button id="quit">Salir del Test</button>
+            <button id="startAgain">Volver a Empezar</button>
+        </div>
+    </div>
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
